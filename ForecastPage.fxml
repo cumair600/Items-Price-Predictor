@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="forecastPane" prefHeight="1088.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ForecastPage">
+   <children>
+      <JFXButton id="btnBack" fx:id="btnBack" buttonType="RAISED" layoutX="816.0" layoutY="869.0" onAction="#clickBack" prefHeight="56.0" prefWidth="311.0" style="-fx-background-color: green;" text="Go Back" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </JFXButton>
+      <LineChart id="chartPrice" fx:id="chartPrice" layoutX="236.0" layoutY="300.0" prefHeight="462.0" prefWidth="570.0" title="Price Graph">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <TableView id="tablePrice" fx:id="tablePrice" layoutX="1094.0" layoutY="282.0" prefHeight="478.0" prefWidth="558.0">
+        <columns>
+          <TableColumn fx:id="colMonth" prefWidth="285.0" text="Month" />
+          <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="272.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="422.0" layoutY="798.0" text="Graphical View">
+         <font>
+            <Font name="Rockwell Extra Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="1260.0" layoutY="798.0" text="Tabular View">
+         <font>
+            <Font name="Rockwell Extra Bold" size="22.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-6.0" prefHeight="173.0" prefWidth="1920.0" style="-fx-background-color: #1E8449;">
+         <children>
+            <Label layoutX="14.0" layoutY="68.0" text="Items Price Predictor" textFill="#fafafa">
+               <font>
+                  <Font name="Rockwell Bold" size="66.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="142.0" fitWidth="230.0" layoutX="1734.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label id="txtItem" fx:id="txtItem" layoutX="38.0" layoutY="187.0" prefHeight="46.0" prefWidth="397.0" text="Item Name">
+         <font>
+            <Font name="Rockwell" size="28.0" />
+         </font>
+      </Label>
+      <Label id="txtCity" fx:id="txtCity" layoutX="435.0" layoutY="187.0" prefHeight="46.0" prefWidth="397.0" text="City Name">
+         <font>
+            <Font name="Rockwell" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

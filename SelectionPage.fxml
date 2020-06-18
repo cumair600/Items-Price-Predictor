@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="btnForecast" fx:id="selectionPane" prefHeight="1094.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectionPage">
+   <children>
+      <AnchorPane prefHeight="173.0" prefWidth="1920.0" style="-fx-background-color: #1E8449;">
+         <children>
+            <Label layoutX="14.0" layoutY="61.0" text="Items Price Predictor" textFill="#fafafa">
+               <font>
+                  <Font name="Rockwell Bold" size="66.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="142.0" fitWidth="230.0" layoutX="1734.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pics/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="680.0" layoutY="283.0" text="Select Item">
+         <font>
+            <Font name="Rockwell" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="680.0" layoutY="483.0" text="Select Months">
+         <font>
+            <Font name="Rockwell" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="680.0" layoutY="383.0" text="Select City">
+         <font>
+            <Font name="Rockwell" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnForecast" fx:id="btnForecast" buttonType="RAISED" layoutX="796.0" layoutY="598.0" onAction="#clickForecast" prefHeight="60.0" prefWidth="331.0" style="-fx-background-color: green;" text="Forecast" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox id="comboItem" fx:id="comboItem" layoutX="961.0" layoutY="274.0" prefHeight="49.0" prefWidth="302.0" promptText="Select" style="-jfx-focus-color: green; -jfx-unfocus-color: green;" />
+      <JFXComboBox id="comboCity" fx:id="comboCity" layoutX="961.0" layoutY="374.0" prefHeight="49.0" prefWidth="302.0" promptText="Select" style="-jfx-focus-color: green; -jfx-unfocus-color: green;" />
+      <JFXComboBox id="comboMonths" fx:id="comboMonths" layoutX="960.0" layoutY="475.0" prefHeight="49.0" prefWidth="302.0" promptText="Select" style="-jfx-focus-color: green; -jfx-unfocus-color: green;" />
+      <JFXButton id="btnHelp" fx:id="btnHelp" blendMode="SRC_ATOP" buttonType="RAISED" layoutX="74.0" layoutY="897.0" onAction="#clickHelp" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: #CACFD2 #CACFD2;" text="Help">
+         <effect>
+            <Blend mode="LIGHTEN" />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXSpinner id="spinner" fx:id="spinner" layoutX="937.0" layoutY="696.0" visible="false" />
+      <JFXButton id="btnForecast" fx:id="btnBack" buttonType="RAISED" layoutX="1673.0" layoutY="893.0" onAction="#clickBack" prefHeight="39.0" prefWidth="153.0" style="-fx-background-color: green;" text="Go Back" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
